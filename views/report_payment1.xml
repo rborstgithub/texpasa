@@ -6,13 +6,13 @@
                 <div class="article">
                     <div class="page">
 
-                       <div style="font-size: 95%; position: absolute; top: 2.7cm; left: 4cm">
+                       <div style="font-size: 95%; position: absolute; top: 2.6cm; left: 4cm">
                             GUATEMALA, <span t-esc="fecha_larga(o.date)"/>
                         </div>
-                        <div style="font-size: 95%; position: absolute; top: 2.7cm; left: 18.7cm; font-weight: bold">
+                        <div style="font-size: 95%; position: absolute; top: 2.6cm; left: 18.2cm; font-weight: bold">
                             ***<span t-esc="'{0:,.2f}'.format(o.amount)"/>***
                         </div>
-                        <div style="font-size: 95%; position: absolute; top: 3.6cm; left: 4.5cm; width: 18.5cm">
+                        <div style="font-size: 95%; position: absolute; top: 3.5cm; left: 4.5cm; width: 18.5cm">
                             <span t-esc="o.nombre_impreso or o.partner_id.name"/>
                         </div>
                         <div style="font-weight: bold; font-size: 95%; text-transform: uppercase; position: absolute; top: 4.3cm; left: 3.3cm; width: 20cm">
@@ -21,14 +21,12 @@
                         <div t-if="o.no_negociable == True" style="font-size: 100%; position: absolute; top: 6.2cm; left: 1.5cm">
                             <span>NO  NEGOCIABLE</span>
                         </div>
-                        <div style="font-size: 95%; position: absolute; top: 13cm; left: 3.5cm; width: 15cm">
-                            DESCRIPCION<span t-field="o.descripcion"/>
+                        <div style="font-size: 95%; position: absolute; top: 10.5cm; left: 1cm; width: 15cm">
+                        <span t-field="o.descripcion"/>
                         </div>
-                        <div style="font-size: 95%; position: absolute; top: 13.5cm; left: 3.5cm; width: 15cm">
-                            CIRCULAR:<span t-field="o.memo"/>
-                        </div>
-                        <div style="position: absolute; top: 10.5cm; left: 1cm; font-weight: bold">
-                            <table class="table table-sm table-borderless">
+                       
+                        <div style="position: absolute; top: 12cm; left: 1cm; font-weight: bold">
+                            <table>
                                 <tbody>
                                         <tr t-foreach="o.move_id.line_ids" t-as="l">
                                         <td style="width: 2.5cm">
@@ -53,8 +51,8 @@
                             </table>
                         </div>
 
-                        <div style="position: absolute; top: 13cm; left: 15cm; font-weight: bold">
-                            <table class="table table-sm table-borderless">
+                        <div style="position: absolute; top: 20cm; left: 15.6cm; font-weight: bold">
+                            <table>
                                 <tbody>
                                     <tr>
                                         <td style="width: 3.5cm" class="text-end">
@@ -70,7 +68,7 @@
                             </table>
                         </div>
 
-                        <div style="position: absolute; top: 15cm; left: 1cm">
+                        <div style="position: absolute; top: 21cm; left: 1cm">
                             <table class="table table-sm table-borderless">
                                 <tbody>
                                     <tr>
