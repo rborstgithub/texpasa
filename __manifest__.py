@@ -11,8 +11,11 @@
     'version': '1.0',
     'depends': ['account'],
     'data': [
+        'views/account_views.xml',
         'views/report_payment1.xml',
         'views/reports.xml',
+        'wizard/asistente_diferencial_cambiario_views.xml',
+        'security/ir.model.access.csv',
     ],
     'license': 'Other OSI approved licence',
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.texpasa</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <button name="button_draft" position="after">
+                <button name="%(window_asistente_diferencial_cambiario)d" string="Generar Diferencial" type="action"/>
+            </button>
+        </field>
+    </record>
+    
+    <!--
+    <record id="view_account_payment_form" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit.l10n_gt_extra</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//group/group[3]" position="after">
+                    <group>
+                        <field name="descripcion"/>
+                        <field name="nombre_impreso"/>
+                        <field name="no_negociable"/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+    -->
+    
+</odoo>
