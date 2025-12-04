@@ -8,7 +8,7 @@
     'author': "Aquih",
     'website': "http://www.aquih.com",
     'category': 'Uncategorized',
-    'version': '1.3',
+    'version': '1.4',
     'depends': ['account', 'account_asset', 'hr'],
     'data': [
         'wizard/asistente_diferencial_cambiario_views.xml',

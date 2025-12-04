@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+        <record id="texpasa_view_account_asset_tree" model="ir.ui.view">
+            <field name="name">texpasa.account.asset.list</field>
+            <field name="model">account.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_tree"/>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="activo_padre_id"/>
+                    <field name="sinc_id"/>
+                </field>
+            </field>
+        </record>
+
         <record id="texpasa_view_account_asset_form" model="ir.ui.view">
             <field name="name">texpasa.account.asset.form</field>
             <field name="model">account.asset</field>
@@ -21,4 +34,14 @@
                 </field>
             </field>
         </record>
+
+        <record id="action_copia_masiva_activos" model="ir.actions.server">
+            <field name="name">Copia masiva a compañía relacionada</field>
+            <field name="model_id" ref="account_asset.model_account_asset"/>
+            <field name="groups_id" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="binding_model_id" ref="account_asset.model_account_asset"/>
+            <field name="state">code</field>
+            <field name="code">action = records.copiar_activo()</field>
+        </record>
+
 </odoo>
